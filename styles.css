@@ -126,7 +126,7 @@ body {
 }
 
 /* Glass Morphism Effects */
-.glass-header, .glass-card, .glass-footer{
+nav.active, .glass-header, .glass-card, .glass-footer{
     background: var(--glass);
     -webkit-backdrop-filter: blur(10px);
     backdrop-filter: blur(10px);
@@ -136,7 +136,7 @@ body {
 
 /* Container */
 .container {
-    
+
     max-width: 1200px;
     margin: 0 auto;
     padding: 3rem 2rem;
@@ -169,11 +169,12 @@ body {
 }
 nav {
     max-height: 0;
-    
     transition: max-height 0.3s ease-out;
+    
 }
 
 nav.active {
+
     display: flex;
     max-height: 500px; /* Adjust based on content */
 }
@@ -207,6 +208,7 @@ nav a:hover::after {
     width: 100%;
 }
 
+
 nav {
     display: flex;
     justify-content: flex-end;
@@ -214,6 +216,7 @@ nav {
 }
 
 nav ul {
+    
     display: flex;
     list-style: none;
     gap: 2rem;
@@ -242,11 +245,7 @@ nav ul {
         position: absolute;
         top: 100%;
         left: 0;
-        border: 1px solid var(--glass-border);
-        box-shadow: var(--shadow);
-        background: var(--glass);
-        -webkit-backdrop-filter: blur(10px);
-        backdrop-filter: blur(10px);
+        
     }
 
     nav.active {
@@ -338,12 +337,12 @@ nav ul {
     gap: 1rem;
 }
 
-
 .profile-video {
     position: relative;
     width: 100%;
-    max-width: 600px; /* or whatever max width you want */
-    aspect-ratio: 16 / 9;
+    height: 100;
+    max-width: 400px;  
+    aspect-ratio: 1/1; /* Ensures perfect square */
     overflow: hidden;
     border-radius: 1rem;
     box-shadow: 0 0 20px rgba(0,0,0,0.1);
@@ -366,7 +365,7 @@ nav ul {
     left: 0;
     width: 100%;
     height: 100%;
-    background-image: url("media/fallback-image.jpg"); /* fallback image */
+    background-image: url("media/profile-fallback.jpg"); /* fallback image */
     background-size: cover;
     background-position: center;
     z-index: 0;
@@ -375,6 +374,14 @@ nav ul {
 .profile-video:hover {
     transform: scale(1.08);
     transition: transform 0.5s ease;
+}
+
+
+@media (max-width: 960px) {
+    .profile-video {
+        width: 300px;
+        height: 300px;
+    }
 }
 
 @media (max-width: 768px) {
@@ -955,5 +962,8 @@ nav ul {
         width: 200px;
         height: 200px;
         filter: blur(50px);
+    }
+     .logo {
+        font-size: 1rem;
     }
 }
