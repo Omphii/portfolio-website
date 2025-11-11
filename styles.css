@@ -136,8 +136,7 @@ nav.active, .glass-header, .glass-card, .glass-footer{
 
 /* Container */
 .container {
-
-    max-width: 1200px;
+    max-width: 1500px;
     margin: 0 auto;
     padding: 3rem 2rem;
 }
